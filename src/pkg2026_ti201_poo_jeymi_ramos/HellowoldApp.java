@@ -13,8 +13,8 @@ package pkg2026_ti201_poo_jeymi_ramos;
 public class HellowoldApp {
     public static void main (String[]args){
         HelloWold hello = new HelloWold();
-        hello.sayHello("Jeymi Jimena Ramos Martínez");
-        hello.sayHello("ITESS");
+        hello.sayHello("Jeymi Jimena Ramos Martínez ");
+        hello.sayHello(" ITESS ");
     }
     
 }
