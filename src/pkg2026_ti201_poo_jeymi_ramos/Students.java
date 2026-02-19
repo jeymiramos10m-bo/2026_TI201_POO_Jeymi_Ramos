@@ -10,12 +10,21 @@
  */
 package pkg2026_ti201_poo_jeymi_ramos;
 public class Students {
+    
+
+    static void showMessage() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     private String controlNumber;
     private String name;
     private String career;
     private String gender;
 
     public Students() {
+        this.name="";
+        this.controlNumber="";
+        this.career="";
+        this.gender="";
     }
 
     public Students(String controlNumber, String name, String career, String gender) {
@@ -24,8 +33,27 @@ public class Students {
         this.career = career;
         this.gender = gender;
     }
-    
 
+    Students(String tI2024, String string) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String getControlNumber() {
+        return controlNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCareer() {
+        return career;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+    
     public void setControlNumber(String controlNumber) {
         this.controlNumber = controlNumber;
     }
