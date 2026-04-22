@@ -10,6 +10,7 @@
  	//Crear una aplicación de escritorio para la Torteria Doña-Juana con fecha de entrega de 29 de mayo de 2026.
 
 package Tema2;
+package Tema2_Clases_Y_Objetos;
 
 public class Tortas {
     public static final int MAX_INGREDIENTES=10;
@@ -52,14 +53,7 @@ public Tortas(){
     public void setIngredientes(String[] ingredientes) {
         this.ingredientes = ingredientes;
     }
-
-    public int getNumIngredientes() {
-        return numIngredientes;
-    }
-
-    public void setNumIngredientes(int numIngredientes) {
-        this.numIngredientes = numIngredientes;
-    }
+    
 
     public float getPrecio() {
         return precio;
@@ -68,16 +62,32 @@ public Tortas(){
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-
+    
+    
     @Override
     public String toString() {
-        return "Tortas{" + "nombre=" + nombre + ", ingredientes=" + ingredientes + ", numIngredientes=" + numIngredientes + ", precio=" + precio + '}';
-    }
-    public void agregarIngredientes(String ingrediente)throws Exception{
-        if(numIngredientes >=MAX_INGREDIENTES){
-            throw new Exception("Maxima cantidad de ingredientes");
-        
+        String listaDeIngredientes="";
+        if(ingredientes != null){
+            for(int i=0; i<numIngredientes; i++){
+            listaDeIngredientes += ingredientes[i]==null?"":ingredientes[i] +",";
+            }
         }
+        return "Tortas{" + "nombre=" + 
+                nombre + ", ingredientes=" 
+                + ingredientes + ", numIngredientes=" 
+                + numIngredientes +
+                ", precio=" + precio + '}';
+    }
+    public void agregarIngredientes(String ingrediente) throws Exception{
+        if(numIngredientes >= MAX_INGREDIENTES){
+            System.out.print("Solo Puedes agregar 10 ingredientes!! ya tienes 10 ingredientes");
+            throw new Exception("maxima cantidad de ingredeientes");
+        }
+        /* Agrega un nuevo ingrediente y lanza una exception si se a llegado al numero
+        *
+        *
+        */
+        
         ingredientes[numIngredientes]=ingrediente;
         numIngredientes++;
     }
